@@ -5,15 +5,15 @@ export default function EditUser({ modal, setModal }) {
   const { users, setUsers } = UseDataContext();
 
   const [error, setError] = useState({ type: "", title: "" });
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [name, setName] = useState(modal?.user.name);
+  const [email, setEmail] = useState(modal?.user.email);
+  const [phone, setPhone] = useState(modal?.user.phone);
 
   function handleSubmit(e) {
     e.preventDefault();
     if (checkName() && checkPhone && checkMail()) {
       for (let i = 0; i < users.length; ++i) {
-        if (users[i].id === modal.id) {
+        if (users[i].id === modal?.user.id) {
           users[i] = { ...users[i], name: name, email: email, phone: phone };
         }
       }

@@ -129,8 +129,8 @@ export default function AddUser({ setModal }) {
       >
         <p
           className={
-            "text-red-700 md:font-medium" +
-            (error?.type == "success" ? " text-green-600" : "")
+            " md:font-medium " +
+            (error?.type == "success" ? " text-green-600" : " text-red-700")
           }
         >
           {error?.title}

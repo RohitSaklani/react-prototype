@@ -42,7 +42,7 @@ export default function Users() {
               <button
                 className="px-3 py-1 text-base text-slate-700  rounded-md border-2 border-slate-500   hover:text-white hover:bg-slate-400 "
                 onClick={() =>
-                  setModal({ type: "edit", visible: true, id: ele.id })
+                  setModal({ type: "edit", visible: true, user: ele })
                 }
               >
                 edit{" "}
